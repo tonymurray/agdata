@@ -1,1 +1,0 @@
-async function d(t){return new Promise((n,r)=>{const e=document.createElement("script");e.src=t,document.body.appendChild(e),e.addEventListener("load",()=>n(e)),e.addEventListener("error",()=>r(e))})}export{d as l};
