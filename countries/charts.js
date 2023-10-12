@@ -648,7 +648,7 @@ asti = window.asti || {};
       },
 
       xls: function(node, chart) {
-         var url = asti.config.path + '/excelexport/';
+         var url = asti.config.legacyasti + '/excelexport/';
          var c = chart.settings('geoitem');
          var i = chart.settings('indicator');
 

@@ -715,7 +715,7 @@ jQuery(document).ready(function($)
       $('#cp-root').attr('data-countries', +$('#cp-root').attr('data-countries') + 1);;
       $('#cp-root').attr('data-geoitems', $('#cp-root').attr('data-geoitems') + ' ' + geo);;
 
-      var notes = asti.config.path + '/excelexport/?content=notes&lang=' + lang + '&countries=' + iso3;
+      var notes = asti.config.legacyasti + '/excelexport/?content=notes&lang=' + lang + '&countries=' + iso3;  // Oct 2023 was asti.config.path
       for(var cid in secondaries)
          notes += ',' + cid;
       $('#download-notes').attr('href', notes);
@@ -1099,7 +1099,7 @@ jQuery(document).ready(function($)
       window.open(url, '_blank');
    });
 
-   $('#download-notes').attr('href', asti.config.path + '/excelexport/?content=notes&lang=' + lang + '&countries=' + iso3);
+   $('#download-notes').attr('href', asti.config.legacyasti + '/excelexport/?content=notes&lang=' + lang + '&countries=' + iso3);
 
    // Load Drupal meta-data and insert where appropriate. Allow override through attribute in HTML of tool-root
    var url;
